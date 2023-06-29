@@ -16,11 +16,12 @@ The goal of SINDy is to combine sparsity-promoting techniques and machine learni
 
  Ultimately, an example of an interpretable and generalizable model is Newton's
 
- \[ F = m a. \]
+ $$ F = m a. $$
 
-This is interpretable in the sense that it has only three terms: $f$, $m$ and $a$, and we can use this model for a problem of interets, analyse, explain and interpret it. This is also generalizable: works for apples falling and spaceships going to the moon. 
+This is interpretable in the sense that it has only three terms: $f$, $m$ and $a$, and we can use this model for a problem of interest, analyse, explain and interpret it. This is also generalizable: works for apples falling and spaceships going to the moon. 
 
-In order to do this, we need modes that are simple and by simple we mean that they are low-dimensional (represented by a few variables) and by models that are sparse, that is, models that have as few terms in the dynamical system as are needed to describe the observed dynamics. **This is the philosophy of the SINDy model: we want space models in terms of a few variable!s**. 
+In order to do this, we need models that are simple and by simple we mean that they are low-dimensional (represented by a few variables) and sparse, that is, models that have as few terms in the dynamical system as are needed to describe the observed dynamics. **This is the philosophy of the SINDy model: we want sparse models in terms of a few variable!s**. 
+
 
 ## Chaotic Thermal Convection: The Lorenz Attractor
 
@@ -62,6 +63,15 @@ This is very promising, because if we can rediscover dynamics of systems that we
 - **The Library: what terms describe the dynamics?** Even if I measure the right variable, how do I know that my dynamics are polynomial? How do I know they are quadratic, cubic, etc? how do I design the library, so that I can get a dynamical system that is sparse and accurate 
 - **The Optimization: what algorithms that we use to get a sparse model?** It is in this challenge that a lot of the physics informed machine learning comes in. If I know partial physics, can I enforce that in my optimization? Can I constrain my optimization to give me sparse solutions?
 
+
+
+## Training Data and Disambiguating Models
+
+SINDy requires relatively cleaned data, sampled
+
+polynomial fitting though the noisy data and then takes the derivative of that
+
+
 ## References
 
 
@@ -70,3 +80,9 @@ Brunton, Steven L., Joshua L. Proctor, and J. Nathan Kutz. 2016. “Discovering 
 
 - **Steve Burton, Sparse Identification of Nonlinear Dynamics (SINDy): Sparse Machine Learning Models 5 Years Later!**
 (https://www.youtube.com/watch?v=NxAn0oglMVw)
+
+- **Sparse Nonlinear Dynamics Models with SINDy, Part 2: Training Data & Disambiguating Models**. (https://www.youtube.com/watch?v=8-hoWTJwmrE)
+
+
+
+
