@@ -67,10 +67,34 @@ This is very promising, because if we can rediscover dynamics of systems that we
 
 ## Training Data and Disambiguating Models
 
-SINDy requires relatively cleaned data, sampled
+SINDy has some requirements:
 
-polynomial fitting though the noisy data and then takes the derivative of that
+- Data needs to be cleaned
+- Sampled quickly
 
+However, when we make observations in the real world, data is noisy and messy. A lot of work has been put in making functions that can approximate the derivatives as a way to denoise the data.
+
+### Approximating Derivatives
+
+They use the **total variation regularized derivative** to de-noise the derivative when only state data is available [2]. This approach helps counteract differentiation errors caused by noise in the data [2]. Additionally, the authors mention that the sparse regression framework they employ is robust to measurement and process noise, especially when derivatives are smoothed using the total-variation regularized derivative [4].
+
+![approximation](imgs/Approximating_derivatives.png)
+
+### How to Choose the Right Model
+
+SINDy generates different models that can describe the dynamics of the system.
+
+The authors choose the best model by using the **Pareto front** to isolate parsimonious models from a large family of candidate models [3]. This approach balances the complexity of the model (measured in the number of model terms) with the agreement with data. The identification algorithm aims to find a model that is both simple and predictive. The Pareto front represents the trade-off between model complexity and predictive power, allowing the authors to select the best model that achieves a good balance between the two 
+
+![approximation](imgs/pareto.jpg)
+
+**Source**: N. M. Mangan, J. N. Kutz, S. L. Brunton and J. L. Proctor, Model selection for dynamical systems via sparse regression and information criteria (https://royalsocietypublishing.org/doi/10.1098/rspa.2017.0009)
+
+[3] Schmidt M, Lipson H (2009) Distilling free-form natural laws from experimental data. Science 324:81–85.
+
+## Cool Things: Scientific Discovery
+
+![research](imgs/scientific_discovery.png)
 
 ## References
 
