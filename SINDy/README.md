@@ -1,12 +1,12 @@
 # Sparse Identification of Nonlinear Dynamics (SINDy)
 
+![Data Dynamics](imgs/SINDy_overview.png)
+
 SINDy is a procedure of taking timeseries data and extracting interpretable and generalizable dynamical systems models that describe that data.
 
-![Data Dynamics](imgs/data_dynamics.png)
 
 Those dynamical system models can take the form of an ordinary differential equation or a partial differential equation
 
-![Animated GIF](gifs/lorenz.gif)
 
 The goal of SINDy is to combine sparsity-promoting techniques and machine learning with nonlinear dynamical systems to discover governing equations from noisy measurement data.
 
