@@ -8,7 +8,7 @@ Those dynamical system models can take the form of an ordinary differential equa
 
 ![Animated GIF](gifs/lorenz.gif)
 
- In this work, we combine sparsity-promoting techniques and machine learning with nonlinear dynamical systems to discover governing equations from noisy measurement data.
+The goal of SINDy is to combine sparsity-promoting techniques and machine learning with nonlinear dynamical systems to discover governing equations from noisy measurement data.
 
  ## Why Sparcity?
 
@@ -45,7 +45,7 @@ Instead, what the SINDy algorithm does is that it augments the right hand side o
 
 The entire objective of the SINDy algorithm is to try to find the fewest terms in this library of candidate dynamics that describe the $\dot{x}$ equation, the $\dot{y}$ equation, and the $\dot{z}$ measurements. We are trying to find what are the fewest number of columns in $\Theta$ that equal $\dot{x}$, $\dot{y}$, and $\dot{z}$. SINDy represents a major breakthrough, because 20 years ago, this search would have been a combinatorial brute force search out of all possible sparse combinations of columns to find the best fir to $\dot{x}$, $\dot{y}$, and $\dot{z}$. 
 
-When you do the sparce optimisation in this library, $\Theta$, you essentially learn the structure of your dynamical system and the parameters of what terms are active. So, you learn that the $\dot{x}$ equation is linear in $x$ and $y$, which is actually true in the Lorenz equations; the $\dot{y}$ equation has a linear term in $x$ and $y$ and a nonlinear $xz$ term; and the $\dot{z}$ equation have a $z$ and an $xy$ term. All of this was learned purely from measurement data of our system. 
+When you do the sparse optimisation in this library, $\Theta$, you essentially learn the structure of your dynamical system and the parameters of what terms are active. So, you learn that the $\dot{x}$ equation is linear in $x$ and $y$, which is actually true in the Lorenz equations; the $\dot{y}$ equation has a linear term in $x$ and $y$ and a nonlinear $xz$ term; and the $\dot{z}$ equation have a $z$ and an $xy$ term. All of this was learned purely from measurement data of our system. 
 
 This is very promising, because if we can rediscover dynamics of systems that we already know using the sparse algorithm, then hopefully, we can discover new dynamical systems that we don/t know and still have them be interpretable and generalizable. 
 
